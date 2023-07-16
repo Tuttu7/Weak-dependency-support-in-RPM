@@ -8,8 +8,8 @@
 
 #### Weak Dependencies ( Direct )
 
-#### The pacakge recommendeds another packages , weak dependencies are additional packages in an application. By default yum 
-#### installs all additional packages if it is not available , yum simply ignores them.
+#### The pacakge recommendeds another packages , weak dependencies are additional packages in an application. By default yum installs all weak dependencies by default, if any package is not avaialble yum simply ignores it. 
+
 
 #### Let's see the Weak Dependencies in httpd package 
 
@@ -42,6 +42,7 @@
 	 apr-util-openssl       x86_64     1.6.1-20.el9_2.1        rhel-9-appstream-rhui-rpms      16 k
 	 mod_http2              x86_64     1.15.19-4.el9_2.4       rhel-9-appstream-rhui-rpms     153 k
 	 mod_lua                x86_64     2.4.53-11.el9_2.5       rhel-9-appstream-rhui-rpms      63 k
+
 ```
 	 
 
@@ -98,7 +99,7 @@
 
 
 
-	#### To see packages that are suggested by another packages 
+#### To see packages that are suggested by another packages 
 
  ```
 
@@ -126,9 +127,10 @@
 
 ```
 
-####	To see what package suggested sssd
 
-	```
+#### To see what package suggested sssd
+
+```
  [root@ip-172-31-31-156 ~]# rpm -q --whatsuggests sssd
 	authselect-1.2.6-1.el9.x86_64
 	authselect-compat-1.2.6-1.el9.x86_64
